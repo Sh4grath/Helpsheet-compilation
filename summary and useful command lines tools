@@ -1,0 +1,17 @@
+Gobuster
+para qué utilizar gobuster?
+la herramienta "gobuster" se utiliza para realizar una búsqueda de directorios en un sitio web específico utilizando un diccionario de palabras.
+linea de comando:
+gobuster dir -u (URL con ip) -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+Explicación linea de comando:
+
+gobuster: nombre del programa o comando que estás ejecutando. En este caso, se trata de la herramienta "gobuster", 
+          herramienta de línea de comandos utilizada para realizar ataques de fuerza bruta o búsqueda de directorios en sitios web.
+dir: modo de funcionamiento de gobuster que se utiliza para buscar directorios en el sitio web.
+-u (URL con IP): Aquí debes proporcionar la URL del sitio web que deseas escanear en busca de directorios ocultos. 
+           En lugar de una URL convencional con un nombre de dominio, se utiliza una dirección IP como destino.
+-w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt: El parámetro "-w" especifica la ubicación del diccionario de palabras (wordlist) 
+           que se utilizará para realizar la búsqueda. En este caso, se está utilizando el archivo "directory-list-2.3-medium.txt" 
+           que se encuentra en la ruta "/usr/share/wordlists/dirbuster/" en el sistema.
+
+           
