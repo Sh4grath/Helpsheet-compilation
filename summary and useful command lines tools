@@ -15,7 +15,7 @@ dir: modo de funcionamiento de gobuster que se utiliza para buscar directorios e
            que se encuentra en la ruta "/usr/share/wordlists/dirbuster/" en el sistema.
 
 
-Operando dentro de Samba.
+Operando dentro de Samba
 Para conectarnos a un servidor Samba usaremos "Sambaclient" y a continuacion la iP de la maquina.
 linea de comando:
 sambaclient //(ip) 
@@ -23,4 +23,12 @@ sambaclient //(ip)
 Si encontramos algun grupo de usuarios del q no se dispone contraseña, podemos intentar unirnos directamente al servidor
 linea de comando:
 sambaclient //(ip)/(nombre de usuario)    Nota:Las veces que he puesto el nombre de usuario,  no distingue de mayusculas o minusculas. 
+
+Se puede descargar un directorio directamente dentro de Samba a tu maquina de Kali con get
+Linea de comando:
+smb: /> get(nombre del fichero)
+
+Se puede utilizar los comandos dentro de samba como si fuera en kali con (!) delante de cada comando
+linea de comando:
+!ls: esto listara los archivos como si estuvieras en Kali.
            
