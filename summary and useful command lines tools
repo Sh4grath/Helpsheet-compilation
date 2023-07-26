@@ -4,7 +4,6 @@ la herramienta "gobuster" se utiliza para realizar una búsqueda de directorios 
 linea de comando:
 gobuster dir -u (URL con ip) -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 Explicación linea de comando:
-
 gobuster: nombre del programa o comando que estás ejecutando. En este caso, se trata de la herramienta "gobuster", 
           herramienta de línea de comandos utilizada para realizar ataques de fuerza bruta o búsqueda de directorios en sitios web.
 dir: modo de funcionamiento de gobuster que se utiliza para buscar directorios en el sitio web.
@@ -19,16 +18,33 @@ Operando dentro de Samba
 Para conectarnos a un servidor Samba usaremos "Sambaclient" y a continuacion la iP de la maquina.
 linea de comando:
 sambaclient //(ip) 
-
 Si encontramos algun grupo de usuarios del q no se dispone contraseña, podemos intentar unirnos directamente al servidor
 linea de comando:
 sambaclient //(ip)/(nombre de usuario)    Nota:Las veces que he puesto el nombre de usuario,  no distingue de mayusculas o minusculas. 
-
 Se puede descargar un directorio directamente dentro de Samba a tu maquina de Kali con get
 Linea de comando:
 smb: /> get(nombre del fichero)
-
 Se puede utilizar los comandos dentro de samba como si fuera en kali con (!) delante de cada comando
 linea de comando:
 !ls: esto listara los archivos como si estuvieras en Kali.
+
+Hydra
+Fuerza bruta sabiendo el nombre de usuario
+hydra: Es el nombre del programa o comando que estás ejecutando. "Hydra" es una herramienta de línea de comandos que se utiliza para realizar 
+          ataques de fuerza bruta y pruebas de penetración en diferentes servicios.
+-l user: Este es el parámetro que se utiliza para especificar el nombre de usuario único o la lista de nombres de usuario que se utilizarán en el ataque de fuerza bruta. 
+          En este caso, "user" es un marcador de posición que indica que debes reemplazarlo con el nombre de usuario real que deseas probar en el ataque.
+-P: Se utiliza para indicar que a continuación se proporcionará la ruta y el nombre del archivo que contiene la lista de contraseñas a probar en el ataque de fuerza bruta.
+/usr/share/wordlists/rockyou.txt: Es la ubicación del archivo "rockyou.txt" que contiene una lista de contraseñas que se utilizarán durante el ataque. 
+          Este archivo, "rockyou.txt", es un diccionario de contraseñas muy conocido y ampliamente utilizado en pruebas de seguridad debido a su extensa cobertura.
+(ip): Aquí debes proporcionar la dirección IP del servidor SSH que deseas atacar.
+ssh: Es el protocolo o servicio objetivo del ataque de fuerza bruta. En este caso, estás indicando que el ataque se dirigirá al servicio SSH en el servidor especificado.
+linea de comando:
+hydra -l user -P /usr/share/wordlists/rockyou.txt (ip) ssh
+
+Gunzip
+para descomprimir .zip
+linea de comando:
+sudo gunzip (nombre del fichero)
+
            
