@@ -14,4 +14,13 @@ dir: modo de funcionamiento de gobuster que se utiliza para buscar directorios e
            que se utilizará para realizar la búsqueda. En este caso, se está utilizando el archivo "directory-list-2.3-medium.txt" 
            que se encuentra en la ruta "/usr/share/wordlists/dirbuster/" en el sistema.
 
+
+Operando dentro de Samba.
+Para conectarnos a un servidor Samba usaremos "Sambaclient" y a continuacion la iP de la maquina.
+linea de comando:
+sambaclient //(ip) 
+
+Si encontramos algun grupo de usuarios del q no se dispone contraseña, podemos intentar unirnos directamente al servidor
+linea de comando:
+sambaclient //(ip)/(nombre de usuario)    Nota:Las veces que he puesto el nombre de usuario,  no distingue de mayusculas o minusculas. 
            
